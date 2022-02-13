@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "linter": "npx eslint src/** --fix"
+    "linter": "npx eslint src/** --fix",
+    "coverage": "npm run test -- --coverage"
   },
   "eslintConfig": {
     "extends": [
@@ -44,5 +45,12 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "2.5.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/reportWebVitals.js"
+    ]
   }
 }
